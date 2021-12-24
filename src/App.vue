@@ -1,12 +1,15 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-
 import Rate from "./components/Rate.vue";
+import { ref } from 'vue';
+
+let score = ref(3.5);
+function onRateChange(num: number) {
+  score.value = num;
+}
 </script>
 
 <template>
-  <Rate></Rate>
+  <Rate v-model="score">评分</Rate>
 </template>
 
 <style>
