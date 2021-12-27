@@ -1,16 +1,22 @@
-<script setup lang="ts">
-import Rate from "./components/Rate.vue";
-import { ref } from 'vue';
-
-let score = ref(3.5);
-function onRateChange(num: number) {
-  score.value = num;
-}
-</script>
-
 <template>
-  <Rate v-model="score">评分</Rate>
+  <div>
+    <h1>Vue3 in action</h1>
+
+    <ul>
+      <li>
+        <router-link to="/rate-comp">Rate-Comp</router-link>
+      </li>
+      <li>
+        <router-link to="/mini-vuex">MiniVuex</router-link>
+      </li>
+    </ul>
+    <router-view></router-view>
+  </div>
 </template>
+
+<script setup lang="ts">
+
+</script>
 
 <style>
 </style>
